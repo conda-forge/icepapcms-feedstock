@@ -145,4 +145,5 @@ Feedstock Maintainers
 
 * [@beenje](https://github.com/beenje/)
 * [@perhedmax](https://github.com/perhedmax/)
+* [@rhomspuron](https://github.com/rhomspuron/)
 
