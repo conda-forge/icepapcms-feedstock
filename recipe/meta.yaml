@@ -24,7 +24,7 @@ requirements:
     - python >=3.5
   run:
     - configobj
-    - icepap >=3.6.1
+    - icepap >=3.7.0
     - ipy >=0.62
     - ldap3
     - pyqt >=5.12.3
