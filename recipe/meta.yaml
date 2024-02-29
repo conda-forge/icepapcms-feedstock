@@ -1,5 +1,5 @@
 {% set name = "icepapcms" %}
-{% set version = "3.7.0" %}
+{% set version = "3.8.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/icepapcms-{{ version }}.tar.gz
-  sha256: 95b69fb05e73a3c24b5f2f18ff1b2d79cc007e41ee80f58aed44f28c5a3544d9
+  sha256: 3cfd161f0d7b2baffdc45ef8fdef845d840e221623806adeaa69462fd2aaf483
 
 build:
   number: 0
