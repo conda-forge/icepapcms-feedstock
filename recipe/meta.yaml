@@ -16,6 +16,7 @@ build:
   entry_points:
     - icepapcms = icepapcms.__main__:main
     - ipapconsole = icepapcms.gui.ipapconsole:main
+    - icepapsnapshot = icepapcms.lib.snapshot:main
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
