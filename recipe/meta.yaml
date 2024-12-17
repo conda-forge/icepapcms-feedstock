@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/icepapcms-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/icepapcms-{{ version }}.tar.gz
   sha256: 9abfd98d01be7f382144a380ad34823fe1139f8282ae3e56d22324946ba7ef49
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - icepapcms = icepapcms.__main__:main
@@ -21,17 +21,20 @@ build:
 
 requirements:
   host:
+    - setuptools
     - pip
-    - python >=3.5
+    - python {{ python_min }}
   run:
     - configobj
     - icepap >=3.7.0
     - ipy >=0.62
     - ldap3
     - pyqt >=5.12.3
-    - python >=3.5
+    - python >={{ python_min }}
     - pyyaml
     - storm >=0.23
+    # for pkg_resources
+    - setuptools
 
 test:
   imports:
@@ -44,6 +47,7 @@ test:
     - pip check
     - icepapcms --help
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
