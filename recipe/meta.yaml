@@ -11,7 +11,7 @@ source:
   sha256: 9abfd98d01be7f382144a380ad34823fe1139f8282ae3e56d22324946ba7ef49
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - icepapcms = icepapcms.__main__:main
@@ -21,6 +21,7 @@ build:
 
 requirements:
   host:
+    - setuptools
     - pip
     - python >=3.5
   run:
@@ -32,6 +33,8 @@ requirements:
     - python >=3.5
     - pyyaml
     - storm >=0.23
+    # for pkg_resources
+    - setuptools
 
 test:
   imports:
