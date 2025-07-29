@@ -1,0 +1,69 @@
+schema_version: 1
+
+context:
+  name: icepapcms
+  version: 3.10.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/icepapcms-${{ version }}.tar.gz
+  sha256: beefbf136e134c1d54d6c9483cb4642df216f566fdbff67f058b2e7a4364d522
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+  python:
+    entry_points:
+      - icepapcms = icepapcms.__main__:main
+      - ipapconsole = icepapcms.gui.ipapconsole:main
+      - icepapsnapshot = icepapcms.lib.snapshot:main
+
+requirements:
+  host:
+    - setuptools
+    - pip
+    - python ${{ python_min }}.*
+  run:
+    - configobj
+    - icepap >=3.7.0
+    - ipy >=0.62
+    - ldap3
+    - pyqt >=5.12.3
+    - python >=${{ python_min }}
+    - pyyaml
+    - storm >=0.23
+    # for pkg_resources
+    - setuptools
+
+tests:
+  - python:
+      imports:
+        - icepapcms
+        - icepapcms.gui
+        - icepapcms.gui.icepapcms
+        - icepapcms.gui.ipapconsole
+        - icepapcms.lib
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+        - pip
+    script:
+      - pip check
+      - icepapcms --help
+
+about:
+  summary: Icepap Configuration Management System and Test Tool
+  license: GPL-3.0-or-later
+  license_file: LICENSE.txt
+  homepage: https://github.com/ALBA-Synchrotron/IcepapCMS
+
+extra:
+  recipe-maintainers:
+    - beenje
+    - perhedmax
+    - rhomspuron
