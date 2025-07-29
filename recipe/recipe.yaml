@@ -47,14 +47,13 @@ tests:
         - icepapcms.gui.icepapcms
         - icepapcms.gui.ipapconsole
         - icepapcms.lib
-      python_version: ${{ python_min }}.*
-  - requirements:
+      python_version: ["${{ python_min }}.*", "3.*"]
+      pip_check: true
+  - script:
+      - icepapcms --help
+    requirements:
       run:
         - python ${{ python_min }}.*
-        - pip
-    script:
-      - pip check
-      - icepapcms --help
 
 about:
   summary: Icepap Configuration Management System and Test Tool
