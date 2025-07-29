@@ -59,7 +59,7 @@ about:
   summary: Icepap Configuration Management System and Test Tool
   license: GPL-3.0-or-later
   license_file: LICENSE.txt
-  homepage: https://github.com/ALBA-Synchrotron/IcepapCMS
+  homepage: https://gitlab.com/icepap-organization/IcepapCMS
 
 extra:
   recipe-maintainers:
