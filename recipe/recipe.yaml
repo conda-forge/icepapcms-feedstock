@@ -37,7 +37,7 @@ requirements:
     - pyyaml
     - storm >=0.23
     # for pkg_resources
-    - setuptools
+    - setuptools <81
 
 tests:
   - python:
