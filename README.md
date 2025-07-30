@@ -3,7 +3,7 @@ About icepapcms-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/icepapcms-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/ALBA-Synchrotron/IcepapCMS
+Home: https://gitlab.com/icepap-organization/IcepapCMS
 
 Package license: GPL-3.0-or-later
 
