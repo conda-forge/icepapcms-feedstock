@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: icepapcms
-  version: "3.10.2"
+  version: "4.0.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/icepapcms-${{ version }}.tar.gz
-  sha256: 9bbf6543273da13494cae9c2c1e475a7758d1ae6d032e214218e6e576aa0d4af
+  sha256: 7d844c0ae5ccc5ae3105d7d45e0f45ea90d673c9cf68721e8a11fbc377797329
 
 build:
   number: 0
